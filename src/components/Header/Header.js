@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchAsyncMovies } from "../../features/movies/movieSlice";
+import { fetchAsyncMovies, fetchAsyncShows } from "../../features/movies/movieSlice";
 import user from "../../images/user.png";
 import "./Header.scss";
 
@@ -12,12 +12,13 @@ const Header = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     dispatch(fetchAsyncMovies(search));
+    dispatch(fetchAsyncShows(search));
   }
 
   return (
     <div className="header">
       <Link to="/">
-        <div className="logo">Movie App</div>
+        <div className="logo">MovieFly</div>
       </Link>
       <div className="search-nav">
         <form action="" onSubmit={handleSearch}>

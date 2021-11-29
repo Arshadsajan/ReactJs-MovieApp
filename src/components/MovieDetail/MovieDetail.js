@@ -9,7 +9,7 @@ const MovieDetail = () => {
   const dispatch = useDispatch();
   const movie = useSelector(state => state.movies12.movieDetail);
 
-  console.log(movie);
+  // console.log(movie);
 
   useEffect(() => {
     // console.log('movie-detail-useEffect');
@@ -26,7 +26,9 @@ const MovieDetail = () => {
   </div>) :
     (<div className="movie-section">
       <div className="section-left">
-        <h2>{movie.Title}</h2>
+        <div className="movie-title">
+          <h2>{movie.Title}</h2>
+        </div>
         <div className="rating-section">
           <p>IMDB Rating <i className="fa fa-star"></i> : {movie.imdbRating}</p>
           <p>IMDB Votes <i className="fa fa-thumbs-up"></i> : {movie.imdbVotes}</p>

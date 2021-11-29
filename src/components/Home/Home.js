@@ -20,7 +20,7 @@ const Home = () => {
     // }
     // fetchMovies();
     dispatch(fetchAsyncMovies(''));
-    dispatch(fetchAsyncShows());
+    dispatch(fetchAsyncShows(''));
   }, [dispatch]);
 
   return (
