@@ -1,0 +1,25 @@
+@import "../../common/colors.scss";
+
+.movie-container{
+    //height-Header + height-Footer = 144px 
+    min-height: calc(100vh - 144px);
+    .movie-carousel-section{
+        margin: 0 auto;
+        width: calc(100vw - 70px);
+    }
+    .movies-heading,
+    .shows-heading{
+        padding: 10px;
+        color: $font-secondary;
+    }
+}
+
+.movie-wrapper2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,150px);
+    justify-content: center;
+    // grid-auto-rows: 1fr;
+    gap: 10px 8px;
+    padding: 0 10px;
+    margin-bottom: 1em;
+}

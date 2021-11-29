@@ -1,0 +1,54 @@
+@import "../../common/colors.scss";
+
+.movie-section{
+  padding: 1em 2em;
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  min-height: calc(100vh - 144px);
+}
+.section-left{
+  flex:0.7;
+  .rating-section{  
+    display: flex;
+    justify-content: space-between;
+    max-width: 620px;
+    margin: 1em 0;
+    p{
+      color: $font-secondary;
+    }
+    .fa{
+      color: yellow;
+    }
+  }
+  .movie-plot{
+    margin-bottom: 1em;
+  }
+}
+.movie-characters{
+  .movie-characters-flex{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 0.6em;
+    span:first-child{
+      font-weight: 600;
+    }
+    span:last-child{
+      color: $font-secondary;
+    }
+  }
+}
+.section-right{
+  flex: 0.3;
+  img{
+    float: right;
+    width: 300px;
+    object-fit: contain;
+  }
+}
+.movie-loading{
+  min-height: calc(100vh - 144px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
